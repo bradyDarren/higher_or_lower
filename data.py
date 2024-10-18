@@ -1,3 +1,4 @@
+#dictionary of the top 30 instagram account in the world
 ig_dict = [
     {"name": "Cristiano Ronaldo", 
      "country": "Portugal", 
@@ -151,8 +152,9 @@ ig_dict = [
 ]
 
 
-count = 0 
+# used to check and see how many items are within our above list.
+# count = 0 
 
-for x in ig_dict:
-    count += 1
-print(count)    
+# for x in ig_dict:
+#     count += 1
+# print(count)    
