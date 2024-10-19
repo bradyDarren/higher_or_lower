@@ -38,6 +38,9 @@ def start():
         correct = highest_followers(rand_account_a[3],rand_account_b[3])
         user_selection = input("Which of the above meantioned has more followers? Type 'A' or 'B': ").lower()
         if user_selection != correct:
+            print()
             correct = False
+        else: 
+            comp_b = comp_a
         
 start()
