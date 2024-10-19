@@ -18,24 +18,26 @@ def rand_account(data_set):
 # - test line
 # print(rand_account(ig_dict)[0])
 
-account1 = rand_account(ig_dict)[3]
-print(account1)
-account2 = rand_account(ig_dict)[3]
-print(account2)
-print(max(account1,account2))
+def highest_followers(a_count, b_count):
+    if a_count > b_count:
+        return "a"
+    else: 
+        return "b"
 
 def start():
     print(logo)
     correct = True
     rand_account_a = rand_account(ig_dict)
-    rand_account_b = rand_account(ig_dict)
     while correct:
+        rand_account_b = rand_account(ig_dict)
         comp_a = f"Compare A: {rand_account_a[0]}, {rand_account_a[1]}, from {rand_account_a[2]}."
         comp_b = f"Against B: {rand_account_b[0]}, {rand_account_b[1]}, from {rand_account_b[2]}."
         print(comp_a)
         print(vs)
         print(comp_b)
+        correct = highest_followers(rand_account_a[3],rand_account_b[3])
         user_selection = input("Which of the above meantioned has more followers? Type 'A' or 'B': ").lower()
-
+        if user_selection != correct:
+            correct = False
         
-# start()
+start()
