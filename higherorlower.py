@@ -22,11 +22,11 @@ def start():
     rand_account_a = rand_account(ig_dict)
     rand_account_b = rand_account(ig_dict)
     while correct:
-        comp_a = f"Compare A: {rand_account(ig_dict)[0]}, "
-        comp_b = rand_account(ig_dict)
-        print(f"Compare A: {comp_a}.")
+        comp_a = f"Compare A: {rand_account_a[0]}, {rand_account_a[1]}, from {rand_account_a[2]}."
+        comp_b = f"Against B: {rand_account_b[0]}, {rand_account_b[1]}, from {rand_account_b[2]}."
+        print(comp_a)
         print(vs)
-        print(f"Against B: {comp_b}.")
+        print(comp_b)
         break
 
 start()
