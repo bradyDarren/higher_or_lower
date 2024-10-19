@@ -39,9 +39,11 @@ def start():
         correct = highest_followers(rand_account_a[3],rand_account_b[3])
         user_selection = input("Which of the above meantioned has more followers? Type 'A' or 'B': ").lower()
         if user_selection != correct:
-            print(f"Sorry that wrong. Final score: {count}")
+            print(f"\n Sorry that wrong. Final score: {count}")
             correct = False
-        else: 
+        else:
+            print("\n" * 30)
+            print(logo) 
             count += 1
             rand_account_a = rand_account_b
 start()
