@@ -31,6 +31,8 @@ def start():
     count = 0
     while correct:
         rand_account_b = rand_account(ig_dict)
+        if rand_account_a == rand_account_b: 
+            rand_account_b = rand_account(ig_dict)
         comp_a = f"Compare A: {rand_account_a[0]}, {rand_account_a[1]}, from {rand_account_a[2]}."
         comp_b = f"Against B: {rand_account_b[0]}, {rand_account_b[1]}, from {rand_account_b[2]}."
         print(comp_a)
