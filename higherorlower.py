@@ -28,6 +28,7 @@ def start():
     print(logo)
     correct = True
     rand_account_a = rand_account(ig_dict)
+    count = 0
     while correct:
         rand_account_b = rand_account(ig_dict)
         comp_a = f"Compare A: {rand_account_a[0]}, {rand_account_a[1]}, from {rand_account_a[2]}."
@@ -38,9 +39,10 @@ def start():
         correct = highest_followers(rand_account_a[3],rand_account_b[3])
         user_selection = input("Which of the above meantioned has more followers? Type 'A' or 'B': ").lower()
         if user_selection != correct:
-            print()
+            print(f"Sorry that wrong. Final score: {count}")
             correct = False
         else: 
-            comp_b = comp_a
+            count += 1
+            rand_account_a = rand_account_b
         
 start()
