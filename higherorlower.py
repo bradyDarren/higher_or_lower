@@ -45,5 +45,6 @@ def start():
             print("\n" * 30)
             print(logo) 
             count += 1
+            print(f"You're correct! Current Score: {count}")
             rand_account_a = rand_account_b
 start()
