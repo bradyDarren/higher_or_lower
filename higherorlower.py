@@ -44,5 +44,4 @@ def start():
         else: 
             count += 1
             rand_account_a = rand_account_b
-        
 start()
