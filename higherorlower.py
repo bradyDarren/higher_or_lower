@@ -11,13 +11,18 @@ def rand_account(data_set):
     name = rand_selection["name"]
     description = rand_selection["description"]
     country = rand_selection["country"]
-    return f"{name}, {description}, from {country}"
+    follower_count = rand_selection["follower count"]
+    return [name, description, country, follower_count]
+
+print(rand_account(ig_dict)[0])
 
 def start():
     print(logo)
     correct = True
+    rand_account_a = rand_account(ig_dict)
+    rand_account_b = rand_account(ig_dict)
     while correct:
-        comp_a = rand_account(ig_dict)
+        comp_a = f"Compare A: {rand_account(ig_dict)[0]}, "
         comp_b = rand_account(ig_dict)
         print(f"Compare A: {comp_a}.")
         print(vs)
